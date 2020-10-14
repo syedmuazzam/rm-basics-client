@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Dashboard from '../views/Dashboard.vue'
 import Projects from '../views/Projects.vue'
 import Team from '../views/Team.vue'
-import CRUD from '../views/CRUD.vue'
+// import CRUD from '../views/CRUD.vue'
 
 Vue.use(VueRouter)
 
@@ -23,11 +23,11 @@ const routes = [
     name: 'Team',
     component: Team
   },
-  {
-    path: '/CRUD',
-    name: 'CRUD',
-    component: CRUD
-  }
+  // {
+  //   path: '/CRUD',
+  //   name: 'CRUD',
+  //   component: CRUD
+  // }
 ]
 
 const router = new VueRouter({

@@ -136,7 +136,7 @@
         small
         @click="deleteItem(item)"
       >
-        mdi-delete
+        mdi-worker
       </v-icon>
     </template>
     <template v-slot:no-data>

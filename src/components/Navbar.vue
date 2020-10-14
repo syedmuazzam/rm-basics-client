@@ -7,7 +7,7 @@
         <span>Mars</span>
       </v-toolbar-title>
       <v-spacer />
-      <v-btn flat text color="grey">
+      <v-btn text color="grey">
         <span>Sign Out</span>
         <v-icon>mdi-exit-to-app</v-icon>
       </v-btn>

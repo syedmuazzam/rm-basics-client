@@ -80,7 +80,7 @@
 </template>
 
 <script>
-// import moment from "../plugins/moment"
+import moment from 'moment'
 
 export default {
     data: () => ({
@@ -124,17 +124,22 @@ export default {
       }
     },
 
+    created () {
+      this.initialize()
+    },
+
     computed: {
         formTitle () {
             return this.editedIndex === -1 ? 'New Project' : 'Edit Project' 
         },
-
-        dateStarted () {
-          return this.dateDeadline
-        },
     },
 
     methods: {
+      initialize () {
+        var today = new Date()
+        this.editedItem.dateStarted = moment(today).format('dddd, MMMM Do YYYY')
+        this.defaultItem.dateStarted = moment(today).format('dddd, MMMM Do YYYY')
+      },
       close () {
         this.dialog = false
         this.$refs.form.resetValidation()
@@ -149,6 +154,7 @@ export default {
         if (this.editedIndex > -1) {
           Object.assign(this.projects[this.editedIndex], this.editedItem)
         } else {
+          this.editedItem.dateDeadline = moment(this.editedItem.dateDeadline).format('dddd, MMMM Do YYYY')
           this.projects.push(this.editedItem)
         }
         this.close()

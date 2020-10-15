@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Dashboard from '../views/Dashboard.vue'
 import Projects from '../views/Projects.vue'
 import Team from '../views/Team.vue'
+import Form from '../views/Form.vue'
 // import CRUD from '../views/CRUD.vue'
 
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ const routes = [
     path: '/team',
     name: 'Team',
     component: Team
+  },
+  {
+    path: '/form',
+    name: 'Form',
+    component: Form
   },
   // {
   //   path: '/CRUD',

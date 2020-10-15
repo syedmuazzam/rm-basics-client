@@ -140,6 +140,7 @@ export default {
         this.editedItem.dateStarted = moment(today).format('dddd, MMMM Do YYYY')
         this.defaultItem.dateStarted = moment(today).format('dddd, MMMM Do YYYY')
       },
+      
       close () {
         this.dialog = false
         this.$refs.form.resetValidation()

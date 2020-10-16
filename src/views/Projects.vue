@@ -87,7 +87,6 @@
 // @ is an alias to /src 
 // import DateDisplay from '@/components/DateDisplay'
 import moment from 'moment'
-import { required } from 'vuelidate/lib/validators'
 
 
 export default {
@@ -127,13 +126,6 @@ export default {
       tasksCompleted: 0
       },
   }),
-
-validations: {
-  editedItem: {
-    required,
-
-  }
-},
 
   computed: {
     formTitle () {

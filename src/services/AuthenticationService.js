@@ -6,6 +6,6 @@ export default {
   },
 
   register (credentials) {
-    return Api().post('signin', credentials)
+    return Api().post('register', credentials)
   }
 }

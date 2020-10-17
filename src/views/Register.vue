@@ -1,6 +1,8 @@
 <template>
   <div class = "register">
-    <v-form>
+    <v-form
+      v-model="valid"
+    >
       <v-container>
         <v-row justify="center">
           <h1>Register</h1>
@@ -39,11 +41,14 @@
         </v-row>
         <v-row justify="center">
           <v-col
-            cols="1"
-            md="1"
+            cols="8"
+            md="3"
           >
+            <span class="red--text" v-html="error"></span>
+            <br />
             <v-btn
-              @click="signin"
+              :disabled = "!valid"
+              @click="register"
             >
               Register
             </v-btn>
@@ -62,6 +67,8 @@ export default {
   data: () => ({
     email: '',
     password: '',
+    valid: false,
+    error: '',
     showPass: false,
     rules: {
       passRequired: v => !!v || 'Required.',
@@ -73,12 +80,16 @@ export default {
     },
   }),
   methods: {
-    async signin () {
-      const response = await AuthenticationService.signin ({
+    async register () {
+      try {
+      const response = await AuthenticationService.register ({
         email: this.email,
         password: this.password
       })
       console.log(response.data)
+      } catch (error) {
+        this.error = error.response.data.error
+      }
     }
   }
 }

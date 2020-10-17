@@ -5,11 +5,17 @@ import Projects from '../views/Projects.vue'
 import Team from '../views/Team.vue'
 import Form from '../views/Form.vue'
 import SignIn from '../views/SignIn.vue'
+import Register from '../views/Register.vue'
 // import CRUD from '../views/CRUD.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/register',
+    name: 'register',
+    component: Register
+  },
   {
     path: '/signin',
     name: 'signin',

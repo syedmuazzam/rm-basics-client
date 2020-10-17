@@ -1,9 +1,9 @@
 <template>
-  <div class = "signin">
+  <div class = "register">
     <v-form>
       <v-container>
         <v-row justify="center">
-          <h1>Sign In</h1>
+          <h1>Register</h1>
         </v-row>
         <v-row justify="center">
           <v-col
@@ -45,7 +45,7 @@
             <v-btn
               @click="signin"
             >
-              Sign In
+              Register
             </v-btn>
           </v-col>
         </v-row>

@@ -3,7 +3,7 @@
     <v-form
       v-model="valid"
     >
-      <v-container>
+      <v-container text-xs-center>
         <v-row justify="center">
           <h1>Register</h1>
         </v-row>
@@ -39,13 +39,22 @@
             ></v-text-field>
           </v-col>
         </v-row>
+        <v-row  justify="center">
+          <v-col
+            cols="3"
+            md="3"
+            v-html="error"
+            class="red--text"
+            justify-center
+          >
+            <!-- <span class="red--text" v-html="error"></span> -->
+          </v-col>
+        </v-row>
         <v-row justify="center">
           <v-col
-            cols="8"
-            md="3"
+            cols="1"
+            md="1"
           >
-            <span class="red--text" v-html="error"></span>
-            <br />
             <v-btn
               :disabled = "!valid"
               @click="register"

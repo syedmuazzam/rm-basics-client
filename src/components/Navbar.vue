@@ -7,9 +7,10 @@
         <span>Mars</span>
       </v-toolbar-title>
       <v-spacer />
-      <v-btn text color="grey">
+      <RegisterDialog />
+      <!-- <v-btn text color="grey">
         <span>Register</span>
-      </v-btn>
+      </v-btn> -->
       <v-btn text color="grey">
         <span>Sign In</span>
         <v-icon>mdi-login</v-icon>
@@ -32,18 +33,22 @@
 </template>
 
 <script>
+import RegisterDialog from './RegisterDialog'
+
 export default {
-    data () {
-        return {
-            drawer: false,
-            links: [
-                { icon: 'mdi-view-dashboard', text: 'Dashboard', route: '/' },
-                { icon: 'mdi-folder', text: 'Projects', route: '/projects' },
-                { icon: 'mdi-account', text: 'Team', route: '/team' },
-                { icon: 'mdi-account', text: 'Form', route: '/form' },
-                { icon: 'mdi-table', text: 'CRUD', route: '/CRUD' }
-       ]
-        }
-    }
+    components: {
+      RegisterDialog
+    },
+
+    data: () => ({ 
+      drawer: false,
+      links: [
+          { icon: 'mdi-view-dashboard', text: 'Dashboard', route: '/' },
+          { icon: 'mdi-folder', text: 'Projects', route: '/projects' },
+          { icon: 'mdi-account', text: 'Team', route: '/team' },
+          { icon: 'mdi-account', text: 'Form', route: '/form' },
+          { icon: 'mdi-table', text: 'CRUD', route: '/CRUD' }
+      ]
+    })
 }
 </script>

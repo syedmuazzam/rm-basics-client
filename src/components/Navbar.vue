@@ -8,8 +8,11 @@
       </v-toolbar-title>
       <v-spacer />
       <v-btn text color="grey">
-        <span>Sign Out</span>
-        <v-icon>mdi-exit-to-app</v-icon>
+        <span>Register</span>
+      </v-btn>
+      <v-btn text color="grey">
+        <span>Sign In</span>
+        <v-icon>mdi-login</v-icon>
       </v-btn>
     </v-app-bar>
 

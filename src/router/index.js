@@ -4,29 +4,35 @@ import Dashboard from '../views/Dashboard.vue'
 import Projects from '../views/Projects.vue'
 import Team from '../views/Team.vue'
 import Form from '../views/Form.vue'
+import SignIn from '../views/SignIn.vue'
 // import CRUD from '../views/CRUD.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/signin',
+    name: 'signin',
+    component: SignIn
+  },
+  {
     path: '/',
-    name: 'Dashboard',
+    name: 'dashboard',
     component: Dashboard
   },
   {
     path: '/projects',
-    name: 'Projects',
+    name: 'projects',
     component: Projects
   },
   {
     path: '/team',
-    name: 'Team',
+    name: 'team',
     component: Team
   },
   {
     path: '/form',
-    name: 'Form',
+    name: 'form',
     component: Form
   },
   // {
